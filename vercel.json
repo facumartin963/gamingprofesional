@@ -21,10 +21,9 @@
       "dest": "/public/$1"
     }
   ],
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key",
-    "SHOPIFY_SHOP_NAME": "@shopify_shop_name",
-    "SHOPIFY_ACCESS_TOKEN": "@shopify_access_token",
-    "NODE_ENV": "production"
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 300
+    }
   }
 }
