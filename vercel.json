@@ -1,5 +1,4 @@
 {
-  "name": "gaming-professional-dashboard",
   "version": 2,
   "builds": [
     {
@@ -20,10 +19,5 @@
       "src": "/(.*)",
       "dest": "/public/$1"
     }
-  ],
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 300
-    }
-  }
+  ]
 }
