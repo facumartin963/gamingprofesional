@@ -1,1 +1,30 @@
-
+{
+  "name": "gaming-professional-dashboard",
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ],
+  "env": {
+    "OPENAI_API_KEY": "@openai_api_key",
+    "SHOPIFY_SHOP_NAME": "@shopify_shop_name",
+    "SHOPIFY_ACCESS_TOKEN": "@shopify_access_token",
+    "NODE_ENV": "production"
+  }
+}
