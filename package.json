@@ -1,1 +1,22 @@
-
+{
+  "name": "gaming-professional-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard Gaming Professional - Sistema Multi-Agente",
+  "main": "api/index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build complete'",
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "openai": "^4.20.0",
+    "node-cron": "^3.0.3",
+    "moment": "^2.29.4"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
