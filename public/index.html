@@ -175,6 +175,14 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 16px;
             padding: 1.5rem;
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .chart-card canvas {
+            max-height: 300px !important;
+            width: 100% !important;
         }
 
         .chart-title {
@@ -685,6 +693,9 @@
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    layout: {
+                        padding: 10
+                    },
                     plugins: {
                         legend: {
                             labels: {
@@ -695,7 +706,8 @@
                     scales: {
                         x: {
                             ticks: {
-                                color: '#888888'
+                                color: '#888888',
+                                maxTicksLimit: 10
                             },
                             grid: {
                                 color: 'rgba(255, 255, 255, 0.1)'
